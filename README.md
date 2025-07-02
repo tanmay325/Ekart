@@ -2,7 +2,7 @@
 
 ## About
 
-This is a demo project for practicing Spring + Thymeleaf. The idea was to build some basic shopping cart web app.
+This is a Ekart demo project for practicing Spring + Thymeleaf. The idea was to build some basic shopping cart web app.
 
 It was made using **Spring Boot**, **Spring Security**, **Thymeleaf**, **Spring Data JPA**, **Spring Data REST and Docker**. 
 Database is in memory **H2**.
@@ -41,38 +41,19 @@ User password: **password**
 
 Go to the root folder of the application and type:
 ```bash
-$ chmod +x scripts/mvnw
-$ scripts/mvnw spring-boot:run
+$ cd scripts/mvnw spring-boot:run
 ```
 
 #### Using Executable Jar
 
 Or you can build the JAR file with 
 ```bash
-$ scripts/mvnw clean package
+$ cd scripts/mvnw clean package
 ``` 
 
 Then you can run the JAR file:
 ```bash
 $ java -jar target/shopping-cart-0.0.1-SNAPSHOT.jar
-```
-
-### Maven
-
-Open a terminal and run the following commands to ensure that you have valid versions of Java and Maven installed:
-
-```bash
-$ java -version
-java version "1.8.0_102"
-Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
-Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
-```
-
-```bash
-$ mvn -v
-Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
-Maven home: /usr/local/Cellar/maven/3.3.9/libexec
-Java version: 1.8.0_102, vendor: Oracle Corporation
 ```
 
 #### Using the Maven Plugin
@@ -145,23 +126,3 @@ Tests can be run by executing following command from the root of the project:
 ```bash
 $ mvn test
 ```
-
-## Helper Tools
-
-### HAL REST Browser
-
-Go to the web browser and visit `http://localhost:8070/`
-
-You will need to be authenticated to be able to see this page.
-
-### H2 Database web interface
-
-Go to the web browser and visit `http://localhost:8070/h2-console`
-
-In field **JDBC URL** put 
-```
-jdbc:h2:mem:shopping_cart_db
-```
-
-In `/src/main/resources/application.properties` file it is possible to change both
-web interface url path, as well as the datasource url.
